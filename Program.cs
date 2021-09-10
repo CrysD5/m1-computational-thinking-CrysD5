@@ -83,6 +83,21 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("ARE THESE INTEGERS EQUAL?\n");
 
             // Enter your solution here
+            Console.WriteLine("Please enter a number for A: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Please enter a number for B: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            if(a == b)
+            {
+                Console.WriteLine("These numbers are equal.");
+            }
+            else 
+            {
+                Console.WriteLine("These numbers are not equal.");
+            }
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -98,6 +113,20 @@ namespace ComputationalThinkingExercises
 
             // Enter your solution here
 
+            Console.WriteLine("Please enter a number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            if ((number % 2) == 0)
+            {
+                // divisible by 2
+                Console.WriteLine("Your number is even.");
+            }
+            else
+            {
+                Console.WriteLine("Your number is odd.");
+            }
+
+
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -111,6 +140,31 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("VOWEL OR CONSONANT?\n");
 
             // Enter your solution here
+            Console.WriteLine("Please enter a letter: ");
+            char letter = Convert.ToChar(Console.ReadLine());
+
+            switch(letter)
+            {
+                case 'a': 
+                    Console.WriteLine("Vowel");
+                    break;
+                case 'e': 
+                    Console.WriteLine("Vowel");
+                    break;
+                case 'i':
+                    Console.WriteLine("Vowel");
+                    break;
+                case 'o':
+                    Console.WriteLine("Vowel");
+                    break;
+                case 'u':
+                    Console.WriteLine("Vowel");
+                    break;
+                default:
+                    Console.WriteLine("Consonant");
+                    break;
+
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -125,6 +179,28 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("FIND THE LARGEST NUMBER\n");
 
             // Enter your solution here
+            Console.WriteLine("Please enter a number for A: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter a number for B: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int c = a - b;
+
+            if (c > 0)
+            {
+                Console.WriteLine("A is bigger than B");
+            }
+            else if (c < 0)
+            {
+                Console.WriteLine("B is bigger than A");
+            }
+            else
+            {
+                Console.WriteLine("Your numbers are the same.");
+            }
+
+
+
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -138,6 +214,17 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("DIVISIBLE BY 3\n");
 
             // Enter your solution here
+            Console.WriteLine("Please enter a number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            if((number % 3) == 0) 
+            {
+                // divisible by 3
+                Console.WriteLine("Divisible by Three");
+            }
+            else
+            {
+                Console.WriteLine("Not divisible by Three");
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -160,6 +247,30 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("RESTAURANT BILL\n");
 
             // Enter your solution here
+            Console.WriteLine(4 * 13);
+
+            Console.WriteLine("\n\nPlease enter the number of people on the bill.");
+            int customerCount = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\n\nPlease enter the amount of one dinner.");
+            int dinnerCost = Convert.ToInt32(Console.ReadLine());
+            float bill = dinnerCost * customerCount;
+            double billTotal = Math.Round(bill, 2);
+            double discount1 = Math.Round(billTotal * 0.90, 2);
+            double discount2 = Math.Round(billTotal * 0.95, 2);
+
+
+            Console.WriteLine("\nYour total is $" + billTotal);
+
+            if (billTotal >= 50)
+            {
+                Console.WriteLine("\nAfter applying a 10% discount your new total is $" + discount1);
+            }
+            else
+            {
+                Console.WriteLine("\nAfter applying a 5% discount your new total is $" + discount2);
+            }
+
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -186,6 +297,46 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("AGE CATEGORY\n");
 
             // Enter your solution here
+            Console.WriteLine("Please enter your age.");
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            if(age >= 0 && age < 3)
+            {
+                Console.WriteLine("Still in Mama's Arms");
+            }
+            else if(age >= 3 && age < 5)
+            {
+                Console.WriteLine("Preschool Maniac");
+            }
+            else if(age >=5 && age < 12){
+                Console.WriteLine("Elementary School");
+            }
+            else if(age >= 12 && age < 15)
+            {
+                Console.WriteLine("Middle School");
+            }
+            else if (age >= 15 && age < 19)
+            {
+                Console.WriteLine("High School");
+            }
+            else if (age >= 19 && age < 23)
+            {
+                Console.WriteLine("College");
+            }
+            else if (age >= 23 && age < 66)
+            {
+                Console.WriteLine("Working for the Man");
+            }
+            else if (age >= 66 && age < 101)
+            {
+                Console.WriteLine("The Golden Years");
+            }
+            else
+            {
+                Console.WriteLine("This program is for humans");
+            }
+
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -201,6 +352,49 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("WORDS TO DIGITS\n");
 
             // Enter your solution here
+            Console.WriteLine("Please enter a number from zero to ten in word format.");
+            string num = Console.ReadLine();
+            string number = num.ToLower();
+
+            switch (number)
+            {
+                case "zero":
+                    Console.WriteLine("The number you enter is: 0");
+                    break;
+                case "one":
+                    Console.WriteLine("The number you enter is: 1");
+                    break;
+                case "two":
+                    Console.WriteLine("The number you enter is: 2");
+                    break;
+                case "three":
+                    Console.WriteLine("The number you enter is: 3");
+                    break;
+                case "four":
+                    Console.WriteLine("The number you enter is: 4");
+                    break;
+                case "five":
+                    Console.WriteLine("The number you enter is: 5");
+                    break;
+                case "six":
+                    Console.WriteLine("The number you enter is: 6");
+                    break;
+                case "seven":
+                    Console.WriteLine("The number you enter is: 7");
+                    break;
+                case "eight":
+                    Console.WriteLine("The number you enter is: 8");
+                    break;
+                case "nine":
+                    Console.WriteLine("The number you enter is: 9");
+                    break;
+                case "ten":
+                    Console.WriteLine("The number you enter is: 10");
+                    break;
+                default:
+                    Console.WriteLine("Number not recognized. Please check your spelling and enter a number between zero and ten in word format.");
+                    break;
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -219,6 +413,27 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("WHICH NAME IS LONGER?\n");
 
             // Enter your solution here
+            Console.WriteLine("Enter your first name:");
+            string first = Console.ReadLine();
+            int firstLength = first.Length;
+            Console.WriteLine("Enter your last name:");
+            string last = Console.ReadLine();
+            int lastLength = last.Length;
+
+            Console.WriteLine(first + " " + last + " is your full name.");
+
+            if (firstLength > lastLength)
+            {
+                Console.WriteLine("First is longer.");
+            }
+            else if (firstLength == lastLength)
+            {
+                Console.WriteLine("Same-sies!");
+            }
+            else
+            {
+                Console.WriteLine("Last must be longer!");
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -236,6 +451,23 @@ namespace ComputationalThinkingExercises
 
             // Enter your solution here
 
+            Console.WriteLine("Please enter name A: ");
+            string nameA = Console.ReadLine();
+
+            Console.WriteLine("Please enter name B: ");
+            string nameB = Console.ReadLine();
+
+
+
+            if (nameA == nameB)
+            {
+                Console.WriteLine("The names are the same.");
+            }
+            else
+            {
+                Console.WriteLine("The names are different.");
+            }
+
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -249,6 +481,13 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("NAME AND PLACE OF BIRTH\n");
 
             // Enter your solution here
+            Console.WriteLine("Please enter your first name.");
+            string name = Console.ReadLine();
+            Console.WriteLine("Please enter where you were born.");
+            string born = Console.ReadLine();
+
+            Console.WriteLine("Hello " + name + ". " + born + " seems like a very nice place to be born!");
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
