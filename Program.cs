@@ -83,6 +83,7 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("ARE THESE INTEGERS EQUAL?\n");
 
             // Enter your solution here
+            // NOTE: great implementation and clean code
             Console.WriteLine("Please enter a number for A: ");
             int a = Convert.ToInt32(Console.ReadLine());
 
@@ -112,7 +113,7 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("EVEN OR ODD?\n");
 
             // Enter your solution here
-
+            // NOTE: clean implementation
             Console.WriteLine("Please enter a number: ");
             int number = Convert.ToInt32(Console.ReadLine());
 
@@ -142,7 +143,8 @@ namespace ComputationalThinkingExercises
             // Enter your solution here
             Console.WriteLine("Please enter a letter: ");
             char letter = Convert.ToChar(Console.ReadLine());
-
+            // NOTE: using a switch case is good but you could have just used an if statement
+            // e.g. if(letter == 'a' || letter == 'e' || etc...)
             switch(letter)
             {
                 case 'a': 
@@ -184,7 +186,7 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("Please enter a number for B: ");
             int b = Convert.ToInt32(Console.ReadLine());
             int c = a - b;
-
+            // NOTE: good way to use math to solve this
             if (c > 0)
             {
                 Console.WriteLine("A is bigger than B");
@@ -247,6 +249,9 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("RESTAURANT BILL\n");
 
             // Enter your solution here
+            // NOTE: the line below this should have been deleted or commented out
+            // NOTE: rearranging the code below could have saved you a few lines of code
+            // e.g. only apply the discount if it meets the condition rather than calulating both and then using the one you need
             Console.WriteLine(4 * 13);
 
             Console.WriteLine("\n\nPlease enter the number of people on the bill.");
@@ -257,7 +262,6 @@ namespace ComputationalThinkingExercises
             double billTotal = Math.Round(bill, 2);
             double discount1 = Math.Round(billTotal * 0.90, 2);
             double discount2 = Math.Round(billTotal * 0.95, 2);
-
 
             Console.WriteLine("\nYour total is $" + billTotal);
 
@@ -354,6 +358,8 @@ namespace ComputationalThinkingExercises
             // Enter your solution here
             Console.WriteLine("Please enter a number from zero to ten in word format.");
             string num = Console.ReadLine();
+
+            // NOTE: good job performing a ToLower() for this comparison
             string number = num.ToLower();
 
             switch (number)
@@ -415,6 +421,7 @@ namespace ComputationalThinkingExercises
             // Enter your solution here
             Console.WriteLine("Enter your first name:");
             string first = Console.ReadLine();
+            // NOTE: you didn't have to save these to new variables you could have used first.Length in the if statement condition
             int firstLength = first.Length;
             Console.WriteLine("Enter your last name:");
             string last = Console.ReadLine();
@@ -450,7 +457,7 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("ARE THESE NAMES THE SAME?\n");
 
             // Enter your solution here
-
+            // NOTE: should have done a ToLower() comparison because this would fail with case sensitivity
             Console.WriteLine("Please enter name A: ");
             string nameA = Console.ReadLine();
 
@@ -485,7 +492,7 @@ namespace ComputationalThinkingExercises
             string name = Console.ReadLine();
             Console.WriteLine("Please enter where you were born.");
             string born = Console.ReadLine();
-
+            // NOTE: nice sentence structure
             Console.WriteLine("Hello " + name + ". " + born + " seems like a very nice place to be born!");
 
 
